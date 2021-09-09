@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+   <classes>
+      <class name="Testcases.Home_object_Test"/>
+    
+     <class name="Testcases.Px_bg_Test"/>
+    <class name="Testcases.Px_bg_mainscreen"/> 
+         <class name="Testcases.Google_bg_Test"/>
+     
+         <class name="Testcases.Main_screen_Test"/> 
+         
+      
+        <class name="Testcases.Objects_backgrounds_Test"/>
+   <!--        <class name="Testcases.Magazine_bg"/>
+       <class name="Testcases.neon_bg"/>
+         <class name="Testcases.Qoutes_test"/>
+       <class name="Testcases.Recording_bg"/> -->
+    </classes>
+   
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

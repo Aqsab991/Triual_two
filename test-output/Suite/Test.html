@@ -1,0 +1,592 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>45/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jun 09 10:36:12 PKT 2021</td>
+</tr>
+<tr><td>Total time:</td><td>1953 seconds (1953536 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Testcases.Px_bg_Test.E_Testcase5()'><b>E_Testcase5</b><br>Test class: Testcases.Px_bg_Test</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: The element &apos;By.id: com.vyroai.AutoCutCut:id/progress_loader&apos; does not exist in DOM anymore
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Vyro-MacBook.local&apos;, ip: &apos;fe80:0:0:0:105c:4fa1:3801:2132%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Galaxy Note8, newCommandTimeout: 360, noReset: true, platformName: android, skipUnlock: true, udid: ce0717177b2ad026017e}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-N9500, deviceName: ce0717177b2ad026017e, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: ce0717177b2ad026017e, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 360, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, skipUnlock: true, statBarHeight: 84, takesScreenshot: true, udid: ce0717177b2ad026017e, viewportRect: {height: 2708, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: a7ed93f0-3ed5-49bc-ae40-257ebec7711b
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+	at Testcases.Px_bg_Test.E_Testcase5(Px_bg_Test.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace920497855", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace920497855'><pre>org.openqa.selenium.StaleElementReferenceException: The element &apos;By.id: com.vyroai.AutoCutCut:id/progress_loader&apos; does not exist in DOM anymore
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Vyro-MacBook.local&apos;, ip: &apos;fe80:0:0:0:105c:4fa1:3801:2132%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Galaxy Note8, newCommandTimeout: 360, noReset: true, platformName: android, skipUnlock: true, udid: ce0717177b2ad026017e}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-N9500, deviceName: ce0717177b2ad026017e, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: ce0717177b2ad026017e, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 360, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, skipUnlock: true, statBarHeight: 84, takesScreenshot: true, udid: ce0717177b2ad026017e, viewportRect: {height: 2708, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: a7ed93f0-3ed5-49bc-ae40-257ebec7711b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+	at Testcases.Px_bg_Test.E_Testcase5(Px_bg_Test.java:183)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.E_Testcase5()'><b>E_Testcase5</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Vyro-MacBook.local&apos;, ip: &apos;fe80:0:0:0:105c:4fa1:3801:2132%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Galaxy Note8, newCommandTimeout: 360, noReset: true, platformName: android, skipUnlock: true, udid: ce0717177b2ad026017e}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-N9500, deviceName: ce0717177b2ad026017e, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: ce0717177b2ad026017e, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 360, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, skipUnlock: true, statBarHeight: 84, takesScreenshot: true, udid: ce0717177b2ad026017e, viewportRect: {height: 2708, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: a7ed93f0-3ed5-49bc-ae40-257ebec7711b
+*** Element info: {Using=id, value=com.vyroai.AutoCutCut:id/progress_loader}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at Testcases.Px_bg_mainscreen.E_Testcase5(Px_bg_mainscreen.java:168)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1167522035", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1167522035'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Vyro-MacBook.local&apos;, ip: &apos;fe80:0:0:0:105c:4fa1:3801:2132%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Galaxy Note8, newCommandTimeout: 360, noReset: true, platformName: android, skipUnlock: true, udid: ce0717177b2ad026017e}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-N9500, deviceName: ce0717177b2ad026017e, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: ce0717177b2ad026017e, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 360, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, skipUnlock: true, statBarHeight: 84, takesScreenshot: true, udid: ce0717177b2ad026017e, viewportRect: {height: 2708, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: a7ed93f0-3ed5-49bc-ae40-257ebec7711b
+*** Element info: {Using=id, value=com.vyroai.AutoCutCut:id/progress_loader}
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at Testcases.Px_bg_mainscreen.E_Testcase5(Px_bg_mainscreen.java:168)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>34</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+<tr>
+<td title='Testcases.Px_bg_Test.C_Testcase3()'><b>C_Testcase3</b><br>Test class: Testcases.Px_bg_Test</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: The element &apos;By.id: com.vyroai.AutoCutCut:id/ivDownload&apos; does not exist in DOM anymore
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Vyro-MacBook.local&apos;, ip: &apos;fe80:0:0:0:105c:4fa1:3801:2132%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Galaxy Note8, newCommandTimeout: 360, noReset: true, platformName: android, skipUnlock: true, udid: ce0717177b2ad026017e}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-N9500, deviceName: ce0717177b2ad026017e, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: ce0717177b2ad026017e, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 360, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, skipUnlock: true, statBarHeight: 84, takesScreenshot: true, udid: ce0717177b2ad026017e, viewportRect: {height: 2708, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: a7ed93f0-3ed5-49bc-ae40-257ebec7711b
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:40)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at Baseclass.baseclasstwo.wait(baseclasstwo.java:75)
+	at Testcases.Px_bg_Test.C_Testcase3(Px_bg_Test.java:109)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace653774328", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace653774328'><pre>org.openqa.selenium.StaleElementReferenceException: The element &apos;By.id: com.vyroai.AutoCutCut:id/ivDownload&apos; does not exist in DOM anymore
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Vyro-MacBook.local&apos;, ip: &apos;fe80:0:0:0:105c:4fa1:3801:2132%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: /Users/aqsa/eclipse-workspa..., appActivity: com.vyroai.autocutcut.Activ..., appPackage: com.vyroai.AutoCutCut, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Galaxy Note8, newCommandTimeout: 360, noReset: true, platformName: android, skipUnlock: true, udid: ce0717177b2ad026017e}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-N9500, deviceName: ce0717177b2ad026017e, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: ce0717177b2ad026017e, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 360, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, skipUnlock: true, statBarHeight: 84, takesScreenshot: true, udid: ce0717177b2ad026017e, viewportRect: {height: 2708, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: a7ed93f0-3ed5-49bc-ae40-257ebec7711b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+	at jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:40)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at Baseclass.baseclasstwo.wait(baseclasstwo.java:75)
+	at Testcases.Px_bg_Test.C_Testcase3(Px_bg_Test.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Testcases.Home_object_Test.F_Gallery_Valid()'><b>F_Gallery_Valid</b><br>Test class: Testcases.Home_object_Test</td>
+<td></td>
+<td>10</td>
+<td>Testcases.Home_object_Test@41a0aa7d</td></tr>
+<tr>
+<td title='Testcases.Px_bg_Test.D_Testcase4()'><b>D_Testcase4</b><br>Test class: Testcases.Px_bg_Test</td>
+<td></td>
+<td>14</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+<tr>
+<td title='Testcases.Main_screen_Test.A_Testcase1()'><b>A_Testcase1</b><br>Test class: Testcases.Main_screen_Test</td>
+<td></td>
+<td>2</td>
+<td>Testcases.Main_screen_Test@1a942c18</td></tr>
+<tr>
+<td title='Testcases.Main_screen_Test.C_Testcase3()'><b>C_Testcase3</b><br>Test class: Testcases.Main_screen_Test</td>
+<td></td>
+<td>4</td>
+<td>Testcases.Main_screen_Test@1a942c18</td></tr>
+<tr>
+<td title='Testcases.Objects_backgrounds_Test.D_Testcase4()'><b>D_Testcase4</b><br>Test class: Testcases.Objects_backgrounds_Test</td>
+<td></td>
+<td>128</td>
+<td>Testcases.Objects_backgrounds_Test@55a147cc</td></tr>
+<tr>
+<td title='Testcases.Px_bg_Test.A_Testcase1()'><b>A_Testcase1</b><br>Test class: Testcases.Px_bg_Test</td>
+<td></td>
+<td>11</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.I_Testcase9()'><b>I_Testcase9</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td></td>
+<td>4</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+<tr>
+<td title='Testcases.Home_object_Test.D_Gallery_Valid()'><b>D_Gallery_Valid</b><br>Test class: Testcases.Home_object_Test</td>
+<td></td>
+<td>1</td>
+<td>Testcases.Home_object_Test@41a0aa7d</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.E_Testcase5()'><b>E_Testcase5</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>33</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Home_object_Test.A_Gallery_Invalid()'><b>A_Gallery_Invalid</b><br>Test class: Testcases.Home_object_Test</td>
+<td></td>
+<td>3</td>
+<td>Testcases.Home_object_Test@41a0aa7d</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.I_Testcase9()'><b>I_Testcase9</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>6</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.C_Testcase3()'><b>C_Testcase3</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td></td>
+<td>27</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+<tr>
+<td title='Testcases.Px_bg_Test.G_Testcase7()'><b>G_Testcase7</b><br>Test class: Testcases.Px_bg_Test</td>
+<td></td>
+<td>36</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+<tr>
+<td title='Testcases.Objects_backgrounds_Test.C_Testcase3()'><b>C_Testcase3</b><br>Test class: Testcases.Objects_backgrounds_Test</td>
+<td></td>
+<td>131</td>
+<td>Testcases.Objects_backgrounds_Test@55a147cc</td></tr>
+<tr>
+<td title='Testcases.Px_bg_Test.F_Testcase6()'><b>F_Testcase6</b><br>Test class: Testcases.Px_bg_Test</td>
+<td></td>
+<td>33</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.L_Testcase12()'><b>L_Testcase12</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>1</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.D_Testcase4()'><b>D_Testcase4</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td></td>
+<td>7</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.D_Testcase4()'><b>D_Testcase4</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>4</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Objects_backgrounds_Test.B_Testcase2()'><b>B_Testcase2</b><br>Test class: Testcases.Objects_backgrounds_Test</td>
+<td></td>
+<td>131</td>
+<td>Testcases.Objects_backgrounds_Test@55a147cc</td></tr>
+<tr>
+<td title='Testcases.Objects_backgrounds_Test.H_Testcase8()'><b>H_Testcase8</b><br>Test class: Testcases.Objects_backgrounds_Test</td>
+<td></td>
+<td>251</td>
+<td>Testcases.Objects_backgrounds_Test@55a147cc</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.F_Testcase6()'><b>F_Testcase6</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td></td>
+<td>33</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+<tr>
+<td title='Testcases.Home_object_Test.E_Gallery_Valid()'><b>E_Gallery_Valid</b><br>Test class: Testcases.Home_object_Test</td>
+<td></td>
+<td>5</td>
+<td>Testcases.Home_object_Test@41a0aa7d</td></tr>
+<tr>
+<td title='Testcases.Px_bg_Test.H_Testcase8()'><b>H_Testcase8</b><br>Test class: Testcases.Px_bg_Test</td>
+<td></td>
+<td>1</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+<tr>
+<td title='Testcases.Px_bg_Test.B_Testcase2()'><b>B_Testcase2</b><br>Test class: Testcases.Px_bg_Test</td>
+<td></td>
+<td>2</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+<tr>
+<td title='Testcases.Home_object_Test.B_Gallery_Invalid_B()'><b>B_Gallery_Invalid_B</b><br>Test class: Testcases.Home_object_Test</td>
+<td></td>
+<td>4</td>
+<td>Testcases.Home_object_Test@41a0aa7d</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.M_Testcase13()'><b>M_Testcase13</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>3</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Home_object_Test.C_Gallery_Invalid()'><b>C_Gallery_Invalid</b><br>Test class: Testcases.Home_object_Test</td>
+<td></td>
+<td>2</td>
+<td>Testcases.Home_object_Test@41a0aa7d</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.C_Testcase3()'><b>C_Testcase3</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>4</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Objects_backgrounds_Test.F_Testcase6()'><b>F_Testcase6</b><br>Test class: Testcases.Objects_backgrounds_Test</td>
+<td></td>
+<td>272</td>
+<td>Testcases.Objects_backgrounds_Test@55a147cc</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.A_Testcase1()'><b>A_Testcase1</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>7</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.B_Testcase2()'><b>B_Testcase2</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>10</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.G_Testcase7()'><b>G_Testcase7</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>1</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.J_Testcase10()'><b>J_Testcase10</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>2</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.A_Testcase1()'><b>A_Testcase1</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td></td>
+<td>4</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.F_Testcase6()'><b>F_Testcase6</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>8</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Objects_backgrounds_Test.A_Testcase1()'><b>A_Testcase1</b><br>Test class: Testcases.Objects_backgrounds_Test</td>
+<td></td>
+<td>303</td>
+<td>Testcases.Objects_backgrounds_Test@55a147cc</td></tr>
+<tr>
+<td title='Testcases.Objects_backgrounds_Test.E_Testcase5()'><b>E_Testcase5</b><br>Test class: Testcases.Objects_backgrounds_Test</td>
+<td></td>
+<td>148</td>
+<td>Testcases.Objects_backgrounds_Test@55a147cc</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.K_Testcase11()'><b>K_Testcase11</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>5</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Objects_backgrounds_Test.G_Testcase7()'><b>G_Testcase7</b><br>Test class: Testcases.Objects_backgrounds_Test</td>
+<td></td>
+<td>152</td>
+<td>Testcases.Objects_backgrounds_Test@55a147cc</td></tr>
+<tr>
+<td title='Testcases.Main_screen_Test.B_Testcase2()'><b>B_Testcase2</b><br>Test class: Testcases.Main_screen_Test</td>
+<td></td>
+<td>2</td>
+<td>Testcases.Main_screen_Test@1a942c18</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.G_Testcase7()'><b>G_Testcase7</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td></td>
+<td>6</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.B_Testcase2()'><b>B_Testcase2</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td></td>
+<td>10</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+<tr>
+<td title='Testcases.Google_bg_Test.H_Testcase8()'><b>H_Testcase8</b><br>Test class: Testcases.Google_bg_Test</td>
+<td></td>
+<td>1</td>
+<td>Testcases.Google_bg_Test@1a6d8329</td></tr>
+<tr>
+<td title='Testcases.Px_bg_Test.I_Testcase9()'><b>I_Testcase9</b><br>Test class: Testcases.Px_bg_Test</td>
+<td></td>
+<td>5</td>
+<td>Testcases.Px_bg_Test@1e6a3214</td></tr>
+<tr>
+<td title='Testcases.Px_bg_mainscreen.H_Testcase8()'><b>H_Testcase8</b><br>Test class: Testcases.Px_bg_mainscreen</td>
+<td></td>
+<td>1</td>
+<td>Testcases.Px_bg_mainscreen@368247b9</td></tr>
+</table><p>
+</body>
+</html>
