@@ -40,9 +40,12 @@ public class baseclasstwo {
 		  property.load(inputstream);
 	  DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setCapability("platformName", "Android");
-		cap.setCapability("deviceName", "Galaxy A31");
+	//	cap.setCapability("deviceName", "Galaxy A31");
 	//	cap.setCapability("automationName", "UiAutomator2");
-		cap.setCapability("udid", "RF8R1178CVN");
+	//	cap.setCapability("udid", "RF8R1178CVN");
+		  cap.setCapability("deviceName", "Galaxy Note8");
+	//	cap.setCapability("automationName", "UiAutomator2");
+		cap.setCapability("udid", "ce06171653f0281f027e");
 		cap.setCapability("automationName", property.getProperty("androidAutomationName"));
 		cap.setCapability("autoGrantPermissions", true); 
 		//cap.setCapability("autoAcceptAlerts", "true");
